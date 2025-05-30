@@ -8,3 +8,32 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+.flash {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  animation: fadeOut 1.5s ease forwards;
+  animation-delay: 1s; /* wait 1 second before starting fade */
+}
+
+.flash.notice {
+  background-color: #e0f7fa;
+  color: #00695c;
+}
+
+.flash.alert {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}

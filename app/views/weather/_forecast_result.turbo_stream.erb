@@ -1,0 +1,15 @@
+<h1>Weather Forecast</h1>
+<center><b><%= @weather[:name] %></b></center>
+<p>
+  Current Temperature: <strong><%= @weather[:temperature] %> °C</strong><br>
+  High: <%= @weather[:high] %> °C | Low: <%= @weather[:low] %> °C<br>
+  Condition: <%= @weather[:description].capitalize %>
+</p>
+<br>
+<% if @from_cache %>
+  <p><em><b>Data loaded from cache.</em></b></em></p>
+<% else %>
+  <p><em><b>Fresh data fetched.</b></em></p>
+<% end %>
+
+<%= link_to "Refresh", root_path %>

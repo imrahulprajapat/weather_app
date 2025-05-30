@@ -32,7 +32,7 @@ gem "thruster", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "pry-byebug"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
@@ -52,3 +52,5 @@ group :test do
   gem "selenium-webdriver"
 end
 gem 'dotenv-rails'
+gem 'httparty' # For making API calls
+gem 'geocoder' # For converting address to coordinates
