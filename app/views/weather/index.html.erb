@@ -1,0 +1,8 @@
+<h1>Enter your address</h1>
+<div style="text-align: center;">
+	<%= form_with url: weather_forecast_path, method: :post, local: true do |f| %>
+	  <%= f.label :address, "Address or ZIP code" %><br>
+	  <%= f.text_field :address, required: true, placeholder: 'input..' %><br><br>
+	  <%= f.submit "Get Forecast" %>
+	<% end %>
+</div>
