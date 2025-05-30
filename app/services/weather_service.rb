@@ -14,6 +14,7 @@ class WeatherService
 
   def call
     if (cached = Rails.cache.read(cache_key))
+      Rails.logger.info("Cache hit for #{cache_key}")
       [cached, true]  
     else
       raw_response = fetch_weather
