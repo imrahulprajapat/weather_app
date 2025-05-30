@@ -23,9 +23,9 @@ RSpec.describe WeatherController, type: :controller do
 
     before do
       # Stub GeocodeService call
-      allow_any_instance_of(GeocodeService).to receive(:call).and_return([lat, lon])
+      allow_any_instance_of(GeocodeService).to receive(:call).and_return([ lat, lon ])
       # Stub WeatherService call
-      allow_any_instance_of(WeatherService).to receive(:call).and_return([weather_data, false])
+      allow_any_instance_of(WeatherService).to receive(:call).and_return([ weather_data, false ])
     end
 
     context "when address param is blank" do
@@ -38,7 +38,7 @@ RSpec.describe WeatherController, type: :controller do
 
     context "when address cannot be geocoded" do
       before do
-        allow_any_instance_of(GeocodeService).to receive(:call).and_return([nil, nil])
+        allow_any_instance_of(GeocodeService).to receive(:call).and_return([ nil, nil ])
       end
 
       it "redirects to root with alert" do
@@ -50,7 +50,7 @@ RSpec.describe WeatherController, type: :controller do
 
     context "when weather data cannot be fetched" do
       before do
-        allow_any_instance_of(WeatherService).to receive(:call).and_return([nil, nil])
+        allow_any_instance_of(WeatherService).to receive(:call).and_return([ nil, nil ])
       end
 
       it "redirects to root with alert" do

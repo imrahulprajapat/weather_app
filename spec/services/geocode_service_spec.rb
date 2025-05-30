@@ -11,12 +11,12 @@ RSpec.describe GeocodeService do
       end
 
       before do
-        allow(Geocoder).to receive(:search).with(address).and_return([mock_result])
+        allow(Geocoder).to receive(:search).with(address).and_return([ mock_result ])
       end
 
       it 'returns latitude and longitude' do
         result = described_class.new(address).call
-        expect(result).to eq([40.7128, -74.0060])
+        expect(result).to eq([ 40.7128, -74.0060 ])
       end
     end
 

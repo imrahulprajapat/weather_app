@@ -51,8 +51,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-gem 'dotenv-rails'
-gem 'httparty' # For making API calls
-gem 'geocoder' # For converting address to coordinates
+gem "dotenv-rails"
+gem "httparty" # For making API calls
+gem "geocoder" # For converting address to coordinates
 
 gem "rspec-rails", "~> 8.0"

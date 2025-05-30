@@ -39,7 +39,7 @@ RSpec.describe WeatherService do
       let(:api_response_data) do
         {
           'main' => { 'temp' => 22.0, 'temp_max' => 24.0, 'temp_min' => 20.0 },
-          'weather' => [{ 'description' => 'scattered clouds' }],
+          'weather' => [ { 'description' => 'scattered clouds' } ],
           'name' => 'New York'
         }
       end
