@@ -1,6 +1,10 @@
 # 🌦️ WeatherApp
 
 **WeatherApp** is a simple Ruby on Rails application that fetches and displays current weather information for a given city using the [OpenWeatherMap API](https://openweathermap.org/). It's built with clean Rails architecture and includes test coverage via RSpec and SimpleCov.
+#### Root page
+![weather_1](https://github.com/user-attachments/assets/c44873cb-d3b9-4b03-9039-a6948327e07c)
+#### Weather forecast result
+![weather2](https://github.com/user-attachments/assets/528e5eff-5964-4a7f-af7b-ef9fe43962fa)
 
 ---
 
