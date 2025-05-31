@@ -13,6 +13,14 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require 'simplecov'
+
+SimpleCov.start 'rails' do
+  add_filter '/spec/'          # Don't include spec files in coverage
+  SimpleCov.minimum_coverage 85 # Fail if below 90% coverage
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
